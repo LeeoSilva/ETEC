@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+*{
+	margin: 0;
+	font-family: Roboto;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body{
+	flex-direction: column;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #666; 
+}
+
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fullscreen{
+	text-align: center;
+	cursor: default;
+	user-select: none;
+	-webkit-user-select: none;
+	color: #fff;
+	width: 100%;
+	height: 100vh;
+	flex-direction: column;
+	position: relative;
+}
+.title{
+	font-family: Georgia;
+	font-size: 7vw;
+	letter-spacing: 10px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	padding: 3vh 8vh;
+}
+.subtitle{
+	max-width: 500px;
+	bottom: 15vh;
+	position: absolute;
+	font-weight: 200;
+	font-size: 18px;
+}
+.info{
+	width: 100%;
+	background-color: rgba(255,255,255,.9);
+	padding: 50px 10vw;
+	box-sizing: border-box;
+	text-align: justify;
+}
+.info:nth-child(odd){
+	background-color: transparent;
+	color: #fff;
+	font-weight: 200;
+}
+.login{
+	font-size: 18px;
+	position: absolute;
+	top: 5vh;
+	right: 5vw;
+}
+.line{
+	background-color: #fff;
+	width: 1px;
+	height: 10vh;
+	margin: 0 7vh;
+}
+table{
+	background-color: rgba(0,0,0,.4);
+	padding: 20px;
+	border-radius: 10px;
+}
+a{
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+}
+th{
+	color: #fff;
+	font-size: 25px;
+	padding-bottom: 10px;
+}
+input[type='text'],input[type='password'], input[type='email']{
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #556982;
+	padding: 7px 0;
+	font-weight: 400;
+	color: #fff;
+	width: 250px;
+	transition: .4s;
+}
+::placeholder{
+	color: rgba(255,255,255,.8);
+	font-weight: 300;
+}
+:required{box-shadow: none;}
+input{
+	outline: none;
+}
+td{
+	text-align: center;
+	padding: 10px;
+}
+input[type='submit'], input[type='reset']{
+	cursor: pointer;
+	transition: .4s;
+	background-color: #556982;
+	border: none;
+	color: #fff;
+	padding: 8px 15px;
+	width: 100px;
+}
+input[type='submit']:hover, input[type='reset']:hover{
+	background-color: #455466;
+}
+input[type='text']:focus,input[type='password']:focus,input[type='email']:focus{
+	border-bottom: 2px solid #7891b3;
+}
+label{
+	color: #fff;
+	font-weight: 300;
+	font-size: 14px;
+}
+.menu{
+	position: fixed;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+}
+.block{
+	flex-grow: 0;
+	background-color: red;
+	padding: 5px 10px 5px 15px;
+	margin-bottom: 3px;
+	border-radius: 0 5px 5px 0;
+	position: relative;
+	transition: .4s;
+}
+.block:nth-child(1){
+	background-color: #556982;
+}
+.block:nth-child(2){
+	background-color: #B75001;
+}
+.block:nth-child(3){
+	background-color: #00278C;
+}
+.block:nth-child(4){
+	background-color: #662B7D;
+}
+.balaodialogo {
+	position: absolute;
+	left: 150%;
+	top: 0%;
+	background-color: rgba(255,255,255,.3);
+	border-radius: 7px;
+	padding: 5px 10px;
+	text-align: center;
+	opacity: 0;
+	font-weight: 300;
+	transition: .4s;
+}
+.balaodialogo:after {
+	content: '';
+	position: absolute;
+	border: 10px solid transparent;
+	border-right-color: rgba(255,255,255,.3);
+	top: 50%;
+	right: 100%;
+	margin-top: -10px;
+}
+.block:hover .balaodialogo{
+	opacity: 1;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./Layouts/Layout.css">
+	<title>Register</title>
+
+	<style>
+		span {
+			color: #CC0000;
+		}
+	
+	</style>
+
+</head>
+<body>
+		
+	<div class="links" align="RIGHT">
+		<a href="register.html" style="color: #C3C3C3;">Signup</a>
+		<a href="login.html">Signin</a>
+	</div>
+	
+	
+	<div class="title" align="CENTER">
+		<a href="./index.php">ScienceWiki</a>
+	</div>
+
+
+	<div class="registration">
+		<form action="./registering.php" method="POST">
+			<p>
+				<label for="username">Your username: <span>*</span> </label>
+				<input type="text" name="username"><br>
+				
+				<label for="mail">Your email address: <span>*</span> </label>
+				<input type="text" name="mail"><br>
+
+				<label for"password">Your password: <span>*</span></label>
+				<input type="password" name="password"><br><br>
+
+
+				<label for"gender">Your sex: </label><br>
+					<input type="radio" name="gender" value="male"> Male<br>
+					<input type="radio" name="gender" value="female"> Female<br>
+					<input type="radio" name="gender" value="other"> Other<br>
+				<a href="./registering.php"><input type="submit" value="submit"></a>
+			</p>
+		</form>
+	</div>
+
+
+
+
+</body>
+</html>

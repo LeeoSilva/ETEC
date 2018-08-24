@@ -1,0 +1,92 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CDLL	../vendor/psy/psysh/test/tools/vis.py	/^from ctypes import CDLL, c_char_p, c_int$/;"	kind:namespace	line:40
+CUSTOM_FIXTURES	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^CUSTOM_FIXTURES = [$/;"	kind:variable	line:16
+OUTPUT_FILE	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^        OUTPUT_FILE = abspath(expanduser(args.output_file))$/;"	kind:variable	line:70
+OUTPUT_FILE	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^OUTPUT_FILE = join(__dir__, '..', 'fixtures', 'unvis_fixtures.json')$/;"	kind:variable	line:13
+RANGES	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^RANGES = {$/;"	kind:variable	line:26
+VIS_CSTYLE	../vendor/psy/psysh/test/tools/vis.py	/^VIS_CSTYLE = 0x0002$/;"	kind:variable	line:59
+VIS_GLOB	../vendor/psy/psysh/test/tools/vis.py	/^VIS_GLOB = 0x1000$/;"	kind:variable	line:74
+VIS_HTTP1808	../vendor/psy/psysh/test/tools/vis.py	/^VIS_HTTP1808 = 0x0080$/;"	kind:variable	line:69
+VIS_HTTP1866	../vendor/psy/psysh/test/tools/vis.py	/^VIS_HTTP1866 = 0x0200$/;"	kind:variable	line:72
+VIS_HTTPSTYLE	../vendor/psy/psysh/test/tools/vis.py	/^VIS_HTTPSTYLE = 0x0080$/;"	kind:variable	line:70
+VIS_MIMESTYLE	../vendor/psy/psysh/test/tools/vis.py	/^VIS_MIMESTYLE = 0x0100$/;"	kind:variable	line:71
+VIS_NL	../vendor/psy/psysh/test/tools/vis.py	/^VIS_NL = 0x0010$/;"	kind:variable	line:64
+VIS_NOESCAPE	../vendor/psy/psysh/test/tools/vis.py	/^VIS_NOESCAPE = 0x0400$/;"	kind:variable	line:73
+VIS_NOSLASH	../vendor/psy/psysh/test/tools/vis.py	/^VIS_NOSLASH = 0x0040$/;"	kind:variable	line:68
+VIS_OCTAL	../vendor/psy/psysh/test/tools/vis.py	/^VIS_OCTAL = 0x0001$/;"	kind:variable	line:58
+VIS_SAFE	../vendor/psy/psysh/test/tools/vis.py	/^VIS_SAFE = 0x0020$/;"	kind:variable	line:66
+VIS_SP	../vendor/psy/psysh/test/tools/vis.py	/^VIS_SP = 0x0004$/;"	kind:variable	line:62
+VIS_TAB	../vendor/psy/psysh/test/tools/vis.py	/^VIS_TAB = 0x0008$/;"	kind:variable	line:63
+VIS_WHITE	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^from vis import vis, unvis, VIS_WHITE$/;"	kind:namespace	line:8
+VIS_WHITE	../vendor/psy/psysh/test/tools/vis.py	/^VIS_WHITE = VIS_SP | VIS_TAB | VIS_NL$/;"	kind:variable	line:65
+__all__	../vendor/psy/psysh/test/tools/vis.py	/^__all__ = [$/;"	kind:variable	line:44
+__dir__	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^__dir__ = dirname(abspath(__file__))$/;"	kind:variable	line:11
+_libbsd	../vendor/psy/psysh/test/tools/vis.py	/^_libbsd = CDLL(find_library('bsd'))$/;"	kind:variable	line:80
+_strunvis	../vendor/psy/psysh/test/tools/vis.py	/^_strunvis = _libbsd.strunvis$/;"	kind:variable	line:86
+_strvis	../vendor/psy/psysh/test/tools/vis.py	/^_strvis = _libbsd.strvis$/;"	kind:variable	line:82
+abspath	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^from os.path import abspath, expanduser, dirname, join$/;"	kind:namespace	line:3
+and	../vendor/mockery/mockery/docs/conf.py	/^if not on_rtd:  # only import and set the theme if we're building docs locally$/;"	kind:namespace	line:255
+argp	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^    argp = argparse.ArgumentParser($/;"	kind:variable	line:48
+argparse	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^import argparse$/;"	kind:namespace	line:6
+args	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^    args = argp.parse_args()$/;"	kind:variable	line:65
+c_char_p	../vendor/psy/psysh/test/tools/vis.py	/^from ctypes import CDLL, c_char_p, c_int$/;"	kind:namespace	line:40
+c_int	../vendor/psy/psysh/test/tools/vis.py	/^from ctypes import CDLL, c_char_p, c_int$/;"	kind:namespace	line:40
+chain	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^from itertools import chain$/;"	kind:namespace	line:4
+char	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^        char = chr(codepoint)$/;"	kind:variable	line:77
+choices	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^                      choices=list(RANGES.keys()),$/;"	kind:variable	line:60
+conf.py	../vendor/mockery/mockery/docs/conf.py	1;"	kind:file	line:1
+copyright	../vendor/mockery/mockery/docs/conf.py	/^copyright = u'2014, Pádraic Brady, Dave Marshall, Wouter, Graham Campbell'$/;"	kind:variable	line:49
+cp_range	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^    cp_range = RANGES['bmp'] if args.all else RANGES[args.range]$/;"	kind:variable	line:67
+decoded	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^        decoded = unvis(encoded)$/;"	kind:variable	line:79
+decoded	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^        decoded = unvis(encoded)$/;"	kind:variable	line:86
+default	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^                      default='small')$/;"	kind:variable	line:61
+description	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^        description='Generates test data for Psy\\\\Test\\\\Util\\\\StrTest')$/;"	kind:variable	line:49
+dirname	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^from os.path import abspath, expanduser, dirname, join$/;"	kind:namespace	line:3
+encoded	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^        encoded = vis(char, VIS_WHITE)$/;"	kind:variable	line:78
+encoded	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^        encoded = vis(fixture, VIS_WHITE)$/;"	kind:variable	line:85
+exclude_patterns	../vendor/mockery/mockery/docs/conf.py	/^exclude_patterns = ['_build']$/;"	kind:variable	line:72
+expanduser	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^from os.path import abspath, expanduser, dirname, join$/;"	kind:namespace	line:3
+extensions	../vendor/mockery/mockery/docs/conf.py	/^extensions = [$/;"	kind:variable	line:31
+find_library	../vendor/psy/psysh/test/tools/vis.py	/^from ctypes.util import find_library$/;"	kind:namespace	line:41
+fixtures	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^    fixtures = []$/;"	kind:variable	line:72
+gen_unvis_fixtures.py	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	1;"	kind:file	line:1
+help	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^                      help='Indent JSON output to ease debugging')$/;"	kind:variable	line:51
+html_static_path	../vendor/mockery/mockery/docs/conf.py	/^html_static_path = ['_static']$/;"	kind:variable	line:121
+html_theme	../vendor/mockery/mockery/docs/conf.py	/^    html_theme = 'sphinx_rtd_theme'$/;"	kind:variable	line:257
+html_theme	../vendor/mockery/mockery/docs/conf.py	/^html_theme = 'default'$/;"	kind:variable	line:103
+html_theme_path	../vendor/mockery/mockery/docs/conf.py	/^    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]$/;"	kind:variable	line:258
+htmlhelp_basename	../vendor/mockery/mockery/docs/conf.py	/^htmlhelp_basename = 'MockeryDocsdoc'$/;"	kind:variable	line:170
+if	../vendor/mockery/mockery/docs/conf.py	/^if not on_rtd:  # only import and set the theme if we're building docs locally$/;"	kind:namespace	line:255
+indent	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^    indent = 2 if args.format_output else None$/;"	kind:variable	line:68
+join	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^from os.path import abspath, expanduser, dirname, join$/;"	kind:namespace	line:3
+json	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^import json$/;"	kind:namespace	line:5
+latex_documents	../vendor/mockery/mockery/docs/conf.py	/^latex_documents = [$/;"	kind:variable	line:189
+latex_elements	../vendor/mockery/mockery/docs/conf.py	/^latex_elements = {$/;"	kind:variable	line:175
+man_pages	../vendor/mockery/mockery/docs/conf.py	/^man_pages = [$/;"	kind:variable	line:219
+master_doc	../vendor/mockery/mockery/docs/conf.py	/^master_doc = 'index'$/;"	kind:variable	line:45
+on_rtd	../vendor/mockery/mockery/docs/conf.py	/^on_rtd = os.environ.get('READTHEDOCS', None) == 'True'$/;"	kind:variable	line:253
+os	../vendor/mockery/mockery/docs/conf.py	/^import os$/;"	kind:namespace	line:16
+project	../vendor/mockery/mockery/docs/conf.py	/^project = u'Mockery Docs'$/;"	kind:variable	line:48
+pygments_style	../vendor/mockery/mockery/docs/conf.py	/^pygments_style = 'sphinx'$/;"	kind:variable	line:90
+release	../vendor/mockery/mockery/docs/conf.py	/^release = '0.9'$/;"	kind:variable	line:58
+set	../vendor/mockery/mockery/docs/conf.py	/^if not on_rtd:  # only import and set the theme if we're building docs locally$/;"	kind:namespace	line:255
+source_suffix	../vendor/mockery/mockery/docs/conf.py	/^source_suffix = '.rst'$/;"	kind:variable	line:39
+sphinx_rtd_theme	../vendor/mockery/mockery/docs/conf.py	/^    import sphinx_rtd_theme$/;"	kind:namespace	line:256
+sys	../vendor/mockery/mockery/docs/conf.py	/^import sys$/;"	kind:namespace	line:15
+sys	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^import sys$/;"	kind:namespace	line:2
+templates_path	../vendor/mockery/mockery/docs/conf.py	/^templates_path = ['_templates']$/;"	kind:variable	line:36
+texinfo_documents	../vendor/mockery/mockery/docs/conf.py	/^texinfo_documents = [$/;"	kind:variable	line:233
+the	../vendor/mockery/mockery/docs/conf.py	/^if not on_rtd:  # only import and set the theme if we're building docs locally$/;"	kind:namespace	line:255
+theme	../vendor/mockery/mockery/docs/conf.py	/^if not on_rtd:  # only import and set the theme if we're building docs locally$/;"	kind:namespace	line:255
+unvis	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^from vis import vis, unvis, VIS_WHITE$/;"	kind:namespace	line:8
+unvis	../vendor/psy/psysh/test/tools/vis.py	/^def unvis(src):$/;"	kind:function	line:111
+version	../vendor/mockery/mockery/docs/conf.py	/^version = '0.9'$/;"	kind:variable	line:56
+vis	../vendor/psy/psysh/test/tools/gen_unvis_fixtures.py	/^from vis import vis, unvis, VIS_WHITE$/;"	kind:namespace	line:8
+vis	../vendor/psy/psysh/test/tools/vis.py	/^def vis(src, flags=VIS_WHITE):$/;"	kind:function	line:91
+vis.py	../vendor/psy/psysh/test/tools/vis.py	1;"	kind:file	line:1
+we	../vendor/mockery/mockery/docs/conf.py	/^if not on_rtd:  # only import and set the theme if we're building docs locally$/;"	kind:namespace	line:255

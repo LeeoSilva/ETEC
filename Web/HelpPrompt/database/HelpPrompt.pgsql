@@ -1,0 +1,35 @@
+-- Coded by: Leonardo Camargo From Keys & Kases
+-- Initial date: 13/11/2017
+
+DROP SCHEMA IF EXISTS HelpPrompt;
+CREATE SCHEMA HelpPrompt;
+SET SCHEMA 'HelpPrompt';
+
+CREATE TABLE 'Sign'(
+	'id' SERIAL INTEGER(255)  NOT NULL PRIMARY KEY,
+	'username' VARCHAR(255) NOT NULL,
+	'userpass' VARCHAR(255) NOT NULL,
+	'usermail' VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE 'Geo'(
+	'id' SERIAL INTEGER(255 NOT NULL PRIMARY KEY, 
+	'lat' DECIMAL(255) NOT NULL,
+	'lon' DECIMAL(255) NOT NULL,
+
+	'city' VARCHAR(255) NOT NULL,
+	'state' VARCHAR(255) NOT NULL,
+	'country' VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE 'UserInfo'(
+	'id' SERIAL INTEGER(255) NOT NULL PRIMARY KEY,
+	'userIP' VARCHAR(16) NOT NULL,
+	'username' VARCHAR(255) NOT NULL,
+	'userpass' VARCHAR(255) NOT NULL, 
+	'userbirth' DATE
+);
+
+
+
