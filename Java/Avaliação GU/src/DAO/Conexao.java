@@ -27,7 +27,7 @@ public class Conexao {
         String password = "";
         String url = "jdbc:mysql://"+host+":3306/"+database;
         Connection conexao;
-        
+
     //Construct
     public Conexao(){
                 try {
@@ -41,10 +41,10 @@ public class Conexao {
     public Connection getConexao(){
         return conexao;
     }
-    
+
     public static void main(String[] args) {
-        
+
         new Conexao();
-               
+
     }
 }

@@ -25,16 +25,16 @@ public class ContatoDAO {
 
     boolean next;
     Connection conexao;
-    
-    //Criarcontrutor metodo 
+
+    //Criarcontrutor metodo
     public ContatoDAO(){
        conexao = new Conexao().getConexao();
     }
-        
+
     public void inserir(Contato Contato){
         try {
             String sql = "INSERT INTO contato(nome,telefone,email) VALUES ("+Contato.getNome()+","+Contato.getTel()+","+Contato.getEmail()+","+Contato.getCel()+")";
-            PreparedStatement ps = conexao.prepareStatement(sql);       
+            PreparedStatement ps = conexao.prepareStatement(sql);
             ps.setString(1,Contato.getNome());
             ps.setString(2,Contato.getTel());
             ps.setString(3,Contato.getEmail());
@@ -45,7 +45,7 @@ public class ContatoDAO {
             System.err.println("ERROR: "+ex.getMessage());
         }
     }
-    
+
     public void alterar(Contato Contato){
         try{
             String sql = "UPDATE contato SET nome="+Contato.getNome()+" , telefone="+Contato.getTel()+" , email="+Contato.getEmail()+" WHERE codigo="+Contato.getCodigo()+";";
@@ -60,7 +60,7 @@ public class ContatoDAO {
             System.out.println("ERROR: "+ex.getMessage());
         }
     }
-    
+
     public void excluir(Contato Contato){
         try{
             String sql = " DELETE FROM contato WHERE codigo="+Contato.getCodigo()+";";
@@ -81,7 +81,7 @@ public class ContatoDAO {
             String sql="select * from contato;";
             PreparedStatement ps=conexao.prepareStatement(sql);
             ResultSet rs=ps.executeQuery();
-            
+
             while(rs.next()){
                 Contato c=new Contato();
                 c.setCodigo(rs.getInt("Codigo"));
@@ -90,16 +90,16 @@ public class ContatoDAO {
                 c.setTel(rs.getString("Telefone"));
                 c.setCel(rs.getString("Celular"));
                 lista.add(c);
-                
-                
-                
+
+
+
             }
         } catch (SQLException ex) {
             System.err.println("ERRO ao listar: "+ex.getMessage());
         }
         return lista;
     }
-    
+
     public Contato consultar(int codigo){
         Contato c= null;
         try {
@@ -107,7 +107,7 @@ public class ContatoDAO {
             PreparedStatement ps=conexao.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs=ps.executeQuery();
-            
+
             while(rs.next()){
                 c = new Contato();
                 c.setCodigo(rs.getInt("Codigo"));
@@ -121,7 +121,7 @@ public class ContatoDAO {
         }
         return c;
     }
-    
+
     public static void main(String[] args){
         ContatoDAO DAO = new ContatoDAO();
         /*Contato contato = new Contato();
@@ -131,4 +131,3 @@ public class ContatoDAO {
         contato.setCodigo(3);*/
     };
 }
-
