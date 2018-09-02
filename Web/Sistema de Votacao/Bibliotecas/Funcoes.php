@@ -69,7 +69,6 @@
 		// Escolas Field.
 
 		function escola_id($connection, $id){
-			command = "SELECT escola_id FROM Escola WHERE escola_id=$"
 		}
 
 
