@@ -10,4 +10,7 @@ import { CharactersPage } from './characters';
     IonicPageModule.forChild(CharactersPage),
   ],
 })
-export class CharactersPageModule {}
+export class CharactersPageModule {
+
+
+}

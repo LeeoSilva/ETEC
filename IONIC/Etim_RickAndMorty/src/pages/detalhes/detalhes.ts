@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the DetalhesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { RickAndMortyServiceProvider } from '../../providers/rick-and-morty-service/rick-and-morty-service';
 
 @IonicPage()
 @Component({
@@ -14,12 +8,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detalhes.html',
 })
 export class DetalhesPage {
+    public id: string;
+    public obg: any;
+    public name: string;
+    public status: string;
+    public type: string;
+    public gender: string;
+    public image: string;
+    public origin: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public rm: RickAndMortyServiceProvider) {
+      this.id = navParams.get("id");
+      console.log("Detalhes: " +this.id);
+      this.rm.getEpisodesById(this.id).subscribe((data: [{}]) => {
+          this.obg    = data;
+          this.name   = this.obg.name;
+          this.status = this.obg.status;
+          this.type   = this.obg.type;
+          this.gender = this.obg.gender;
+          this.image  = this.obg.image;
+          this.origin = this.obg.location.name;
+      })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DetalhesPage');
-  }
+  // ionViewDidLoad() { console.log("ionViewDidLoad DetalhesPage"); }
 
 }

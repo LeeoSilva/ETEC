@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RMService } from '../../providers/rick-and-morty-service/rick-and-morty-service.ts';
+import { IonicPage, NavController } from 'ionic-angular';
+import { RickAndMortyServiceProvider } from '../../providers/rick-and-morty-service/rick-and-morty-service';
 import { DetalhesPage } from '../detalhes/detalhes';
 
 @IonicPage()
@@ -9,14 +9,20 @@ import { DetalhesPage } from '../detalhes/detalhes';
   templateUrl: 'characters.html',
 })
 export class CharactersPage {
-    characters: Array<Object> = [];
-    constructor(public navCtrl: NavController, public navParams: NavParams, public rm: RMService) { }
+    public obg: any[] = [];
 
-    ionViewDidLoad() {
-        this.rm.getCharacters().subscribe((data: [{}])=> {
-            this.characters = data.results;
-        });
-    }
+    constructor(public navCtrl: NavController, public rm: RickAndMortyServiceProvider) {}
 
-    getDetalhes(id: number){ this.navCtrl.push(DetalhesPage, {id: id}); }
+    ionViewDidLoad(){
+      this.rm.getCharacters().subscribe((data: [{}]) => {
+          let info = JSON.parse(data._body);
+          // 19 its the number of characters in the array per page request
+          for(let i = 0; i <= 19; i++){
+               this.obg[i] = info.results[i];
+          }
+      })
+  }
+  getDetalhes(id: number){
+      this.navCtrl.push(DetalhesPage, {id: id});
+  }
 }

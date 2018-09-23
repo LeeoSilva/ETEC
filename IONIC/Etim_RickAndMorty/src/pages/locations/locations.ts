@@ -19,7 +19,7 @@ export class LocationsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LocationsPage');
+      // console.log('ionViewDidLoad LocationsPage');
   }
 
 }
