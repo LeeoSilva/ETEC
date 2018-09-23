@@ -11,10 +11,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 // Pages
-import { CharactersPage } from '../pages/characters/characters';
 import { DetalhesPage } from '../pages/detalhes/detalhes';
-// import { LocationsPage } from '../pages/locations/locations';
-// import { EpisodesPage } from '../pages/episodes/episodes';
 
 // Provider
 import { RickAndMortyServiceProvider } from '../providers/rick-and-morty-service/rick-and-morty-service';
@@ -24,9 +21,6 @@ import { RickAndMortyServiceProvider } from '../providers/rick-and-morty-service
     MyApp,
     HomePage,
     DetalhesPage,
-    CharactersPage,
-    // LocationsPage,
-    // EpisodesPage
   ],
   imports: [
     BrowserModule,
@@ -39,9 +33,6 @@ import { RickAndMortyServiceProvider } from '../providers/rick-and-morty-service
     MyApp,
     HomePage,
     DetalhesPage,
-    CharactersPage,
-    // LocationsPage,
-    // EpisodesPage
   ],
   providers: [
     StatusBar,

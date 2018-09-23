@@ -19,12 +19,12 @@ export class DetalhesPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public rm: RickAndMortyServiceProvider) {
       this.id = navParams.get("id");
-      console.log("Detalhes: " +this.id);
-      this.rm.getEpisodesById(this.id).subscribe((data: [{}]) => {
-          this.obg    = data;
+      console.log("Character ID: " +this.id);
+      this.rm.getCharactersById(this.id).subscribe((data: [{}]) => {
+          this.obg    = JSON.parse(data._body);;
           this.name   = this.obg.name;
           this.status = this.obg.status;
-          this.type   = this.obg.type;
+          this.type   = this.obg.species;
           this.gender = this.obg.gender;
           this.image  = this.obg.image;
           this.origin = this.obg.location.name;

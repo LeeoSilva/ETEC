@@ -8,5 +8,14 @@
 
 
 <ion-content padding>
-
+    <ion-list>
+        <ion-item>
+            <ion-avatar item-left *ngIf="image != null"><img src="{{image}}"></ion-avatar>
+            <h1>{{name}}</h1>
+                <p>Status: {{status}}</p>
+                <p>Espécie: {{type}}</p>
+                <p>Gênero: {{gender}}</p>
+                <p>Origem: {{origin}}</p>
+        </ion-item>
+    </ion-list>
 </ion-content>
