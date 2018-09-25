@@ -15,6 +15,7 @@ import { DetalhesPage } from '../pages/detalhes/detalhes';
 
 // Provider
 import { RickAndMortyServiceProvider } from '../providers/rick-and-morty-service/rick-and-morty-service';
+import { GoogleTranslateServiceProvider } from '../providers/google-translate-service/google-translate-service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { RickAndMortyServiceProvider } from '../providers/rick-and-morty-service
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RickAndMortyServiceProvider
+    RickAndMortyServiceProvider,
+    GoogleTranslateServiceProvider
   ]
 })
 export class AppModule {}

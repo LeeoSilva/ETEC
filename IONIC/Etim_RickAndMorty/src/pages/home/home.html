@@ -7,6 +7,9 @@
 </ion-header>
 
 <ion-content padding>
+
+
+
     <ion-list>
         <ion-item (click)="getDetalhes(character.id)" *ngFor="let character of obg">
             <ion-avatar item-left *ngIf="character.image != null">
@@ -15,4 +18,8 @@
             <h2>{{character.name}}</h2>
         </ion-item>
     </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="loadMore($event)" loadingSpinner="bubble">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>
