@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule ^atleta/?$ atleta/listar.php [NC,L]
+RewriteRule ^atleta/([0-9-]+)/?$ atleta/consultar.php?codigo=$1 [NC,L]
+RewriteRule ^atleta/inserir/?$ atleta/inserir.php [NC,L]
+RewriteRule ^atleta/alterar/?$ atleta/alterar.php [NC,L]
+RewriteRule ^atleta/excluir/?$ atleta/excluir.php [NC,L]
+
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+Header add Access-Control-Allow-Headers: "Origin, Content-Type, Accept, Authorization, X-Request-With"
+Header add Access-Control-Allow-Credentials: "true"
