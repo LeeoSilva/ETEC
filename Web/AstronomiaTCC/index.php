@@ -28,7 +28,7 @@
 				<?php
 					include('Funcoes.php');
 	
-					$connection = conectar();
+					$connection = getConn();
 					$titulo = new Registro();
 					echo "<h4>" . $titulo->Titulo($connection, 'Astronomia') . "</h4>";
 				?>

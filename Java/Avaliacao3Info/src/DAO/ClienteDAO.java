@@ -6,12 +6,11 @@ public class ClienteDAO{
 
 	public ClienteDAO(){ conn = new connection().getConn(); }
 
-
 	public void insert(Cliente cliente){
 		try{
 			String sql =
 			"INSERT INTO cliente(cli_nome, cli_nascimento, cli_cpf, cli_rg, cli_endereco, cli_email)
-			VALUES("cliente.getNome()+", "+cliente.getNascimento()+", " +cliente.getCPF()+", " +cliente.getRG()+", "+cliente.getEndereco+", "+cliente.getEmail()+");";
+			VALUES(?, ?, ?, ?, ?, ?);";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, cliente.getnome());
 			ps.setString(2, cliente.getNascimento());
@@ -21,7 +20,7 @@ public class ClienteDAO{
 			ps.setString(6, cliente.getEmail());
 			ps.execute(sql);
 			System.out.println("Contato Inserido com Sucesso");
-		}catch(SQLException e){ System.err.println("Error: " +e.getMessage()); }
+		}catch(SQLException e){ System.err.println("Error in insert" +e.getMessage()); }
 	}
 
 	public void alter(Cliente cliente){
@@ -31,16 +30,15 @@ public class ClienteDAO{
 			PreparedStatement ps = conn.prepareStatement(sql);
 			int rowAlter = ps.executeUpdate();
 			System.out.println("[" +rowAlter +"] - Cliente Alterados!");
-		}catch(SQLException e){ System.err.println("Error: " +e.getMessage()); }
+		}catch(SQLException e){ System.err.println("Error in alter: " +e.getMessage()); }
 	}
 
 	public void delete(Cliente cliente){
 		try{
-			String sql = "DELETE FROM cliente WHERE cli_codigo="+cliente.getCodigo();
+			String sql = "DELETE FROM cliente WHERE cli_codigo="+cliente.getCodigo() + ";";
 			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setInt(1, cliente.getCodigo());
 			ps.execute();
-		}catch(SQLException e){ System.err.println("Error: " e.getMessage()); }
+		}catch(SQLException e){ System.err.println("Error in delete: " e.getMessage()); }
 	}
 
 	public List<Cliente> list(){
@@ -52,16 +50,16 @@ public class ClienteDAO{
 
 			while(rs.next()){
 				Cliente c = new Cliente();
-				c.setCodigo(rs.getInt("cli_codigo"));
-				c.setNome(rs.getString("cli_nome"));
-				c.setNascimento(rs.getString("cli_nascimento"));
-				c.setCPF(rs.getString("cli_cpf"));
-				c.setRG(rs.getString("cli_rg"));
-				c.setEndereco(rs.getString("cli_endereco"));
-				c.setEmail(rs.getString("cli_email"));
+				c.setCodigo(ps.getInt("cli_codigo"));
+				c.setNome(ps.getString("cli_nome"));
+				c.setNascimento(ps.getString("cli_nascimento"));
+				c.setCPF(ps.getString("cli_cpf"));
+				c.setRG(ps.getString("cli_rg"));
+				c.setEndereco(ps.getString("cli_endereco"));
+				c.setEmail(ps.getString("cli_email"));
 				list.add(c);
 			}
-		}catch(SQLException e){ System.err.println("Error ao listar: " e.getMessage()); }
+		}catch(SQLException e){ System.err.println("Error in listar: " e.getMessage()); }
 		return list;
 	}
 
@@ -69,9 +67,9 @@ public class ClienteDAO{
 		Cliente c = null;
 		try{
 			String sql = "select * from cliente where cli_codigo= ?;";
-			PreparedStatement ps.conn.prepareStatement(sql);
+			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, codigo);
-			ResultSet rs=ps.executeQuery();
+			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()){
 				c = new Cliente();
@@ -83,8 +81,7 @@ public class ClienteDAO{
 				c.setEndereco(rs.getString("cli_endereco"));
 				c.setEmail(rs.getString("cli_email"));
 			}
-
-		}catch(SQLException e){ Syste.err.println("Error: "+e.getMessage()); }
+		}catch(SQLException e){ System.err.println("Error: " + e.getMessage()); }
 		return c;
 	}
 

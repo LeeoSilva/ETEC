@@ -1,6 +1,6 @@
 <?php
 	include('Funcoes.php');
-	$connection = conectar();
+	$connection = getConn();
 
 	// $usr = FALSE;
 	// $pass = TRUE;

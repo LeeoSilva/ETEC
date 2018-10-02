@@ -1,6 +1,6 @@
 <?php
 
-	function conectar(){
+	function getConn(){
 		// Connects to the database.
 
 		$connection = mysqli_connect("localhost", "root", "justkidding0909");

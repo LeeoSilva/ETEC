@@ -1,0 +1,7 @@
+{
+  "name": "Etim_Estados",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

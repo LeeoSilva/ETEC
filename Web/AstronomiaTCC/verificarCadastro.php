@@ -1,7 +1,7 @@
 <?php
 	include('Funcoes.php');
 
-	$connection = conectar();
+	$connection = getConn();
 	
 	$nome = $_POST['nome'];
 	$login = $_POST['login'];
